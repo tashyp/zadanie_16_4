@@ -2,13 +2,13 @@
 import React from 'react';
 import uuid from 'uuid';
 import style from './App.css';
-import Title from '../components/Title';
+import Title from '../components/Title.js';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: ['0']
+            data: ['1']
         };
     }
     addTodo(val) {
@@ -25,8 +25,8 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div>
-                <Title title='To Do:' numberoftasks={this.state.data.length} />
+            <div className={style.TodoApp}>
+                <Title title='To Do' numberOfTasks={this.state.data.length}/>
             </div>
         );
     }
